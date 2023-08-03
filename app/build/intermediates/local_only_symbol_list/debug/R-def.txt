@@ -1,0 +1,28 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable ic_movie
+id cover
+id description
+id locations
+id placeholderMessage
+id poster
+id progressBar
+id queryInput
+id title
+layout activity_movies
+layout activity_poster
+layout i_movie
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string nothing_found
+string search
+string something_went_wrong
+style Base.Theme.I_movie
+style Theme.I_movie
+xml backup_rules
+xml data_extraction_rules

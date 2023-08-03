@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">i_movie</string>
+    <string name="nothing_found">nothing found</string>
+    <string name="search">search</string>
+    <string name="something_went_wrong">something went wrong</string>
+    <style name="Base.Theme.I_movie" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.I_movie" parent="Base.Theme.I_movie"/>
+</resources>
