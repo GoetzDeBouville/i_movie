@@ -3,15 +3,14 @@ package com.hellcorp.i_movie.presentation.movies
 import com.hellcorp.i_movie.domain.models.Movie
 
 interface MoviesView {
-    fun showPlaceholderMessage(isVisible: Boolean)
 
-    fun showMoviesList(isVisible: Boolean)
+    fun showLoading()
 
-    fun showProgressBar(isVisible: Boolean)
+    fun showError(errorMessage: String)
 
-    fun changePlaceholderText(newPlaceholderText: String)
+    fun showEmpty(emptyMessage: String)
 
-    fun updateMoviesList(newMoviesList: List<Movie>)
+    fun showContent(movies: List<Movie>)
 
     fun showToast(message: String)
 }

@@ -26,6 +26,7 @@ class PosterActivity : AppCompatActivity(), PosterView {
     override fun setupPosterImg(url: String) {
         Glide.with(applicationContext)
             .load(url)
+            .placeholder(R.drawable.ic_movie)
             .into(poster)
     }
 }
