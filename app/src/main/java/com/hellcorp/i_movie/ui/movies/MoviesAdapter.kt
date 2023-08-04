@@ -11,8 +11,8 @@ class MoviesAdapter(private val clickListener: MovieClickListener) : RecyclerVie
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder = MovieViewHolder(parent)
 
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
-        holder.bind(movies.get(position))
-        holder.itemView.setOnClickListener { clickListener.onMovieClick(movies.get(position)) }
+        holder.bind(movies[position])
+        holder.itemView.setOnClickListener { clickListener.onMovieClick(movies[position]) }
     }
 
     override fun getItemCount(): Int = movies.size
