@@ -43,9 +43,8 @@ class MoviesActivity : MvpActivity(), MoviesView {
     private val handler = Handler(Looper.getMainLooper())
 
     @InjectPresenter
-    private var moviesSearchPresenter: MoviesSearchPresenter? = null
+    lateinit var moviesSearchPresenter: MoviesSearchPresenter
 
-    //    private val moviesSearchPresenter = Creator.provideMoviesSearchPresenter(this, this)
     private var textWatcher: TextWatcher? = null
 
     @ProvidePresenter
@@ -67,15 +66,6 @@ class MoviesActivity : MvpActivity(), MoviesView {
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         moviesList.adapter = adapter
 
-//        if (moviesSearchPresenter == null) {
-//            moviesSearchPresenter = Creator.provideMoviesSearchPresenter(
-//                context = this.applicationContext
-//            )
-//            (this.applicationContext as? MoviesApplication)?.moviesSearchPresenter =
-//                moviesSearchPresenter
-//        }
-//        moviesSearchPresenter?.attachView(this)
-
         textWatcher = object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
             }
@@ -95,43 +85,6 @@ class MoviesActivity : MvpActivity(), MoviesView {
         textWatcher?.let { queryInput.addTextChangedListener(it) }
         queryInput.addTextChangedListener(textWatcher)
     }
-//
-//    override fun onStart() {
-//        super.onStart()
-//        moviesSearchPresenter?.attachView(this)
-//    }
-//
-//    override fun onResume() {
-//        super.onResume()
-//        moviesSearchPresenter?.attachView(this)
-//    }
-//
-//    override fun onPause() {
-//        super.onPause()
-//        moviesSearchPresenter?.detachView()
-//    }
-//
-//    override fun onStop() {
-//        super.onStop()
-//        moviesSearchPresenter?.detachView()
-//    }
-//
-//    override fun onSaveInstanceState(outState: Bundle) {
-//        super.onSaveInstanceState(outState)
-//        moviesSearchPresenter?.detachView()
-//    }
-
-//    override fun onDestroy() {
-//        super.onDestroy()
-//
-//        textWatcher?.let { queryInput.removeTextChangedListener(it) }
-//        moviesSearchPresenter?.detachView()
-//        moviesSearchPresenter?.onDestroy()
-//
-//        if (isFinishing) {
-//            (this.application as? MoviesApplication)?.moviesSearchPresenter = null
-//        }
-//    }
 
     private fun clickDebounce(): Boolean {
         val current = isClickAllowed

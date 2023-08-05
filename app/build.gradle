@@ -32,6 +32,12 @@ android {
         jvmTarget = '1.8'
     }
     buildToolsVersion '33.0.2'
+
+    kotlin {
+        jvmToolchain {
+            languageVersion = JavaLanguageVersion.of(8)
+        }
+    }
 }
 
 dependencies {
