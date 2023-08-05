@@ -37,11 +37,7 @@ class MoviesSearchPresenter(
     private fun searchRequest(newSearchText: String) {
         if (newSearchText.isNotEmpty()) {
             view.render(
-                MoviesState(
-                    movies = movies,
-                    isLoading = true,
-                    errorMessage = null
-                )
+                MoviesState.Loading
             )
 
             moviesInteractor.searchMovies(newSearchText, object : MoviesInteractor.MoviesConsumer {
@@ -54,9 +50,7 @@ class MoviesSearchPresenter(
                         when {
                             errorMessage != null -> {
                                 view.render(
-                                    MoviesState(
-                                        movies = emptyList(),
-                                        isLoading = false,
+                                    MoviesState.Error(
                                         errorMessage = context.getString(R.string.something_went_wrong)
                                     )
                                 )
@@ -65,20 +59,17 @@ class MoviesSearchPresenter(
 
                             movies.isEmpty() -> {
                                 view.render(
-                                    MoviesState(
-                                        movies = emptyList(),
-                                        isLoading = false,
-                                        errorMessage = context.getString(R.string.nothing_found)
+                                    MoviesState.Empty(
+                                        emptyMessage = context.getString(R.string.nothing_found)
                                     )
+
                                 )
                             }
 
                             else -> {
-                                view.render(MoviesState(
-                                    movies = movies,
-                                    isLoading = false,
-                                    errorMessage = null
-                                ))
+                                view.render(
+                                    MoviesState.Content(movies = movies)
+                                )
                             }
                         }
                     }

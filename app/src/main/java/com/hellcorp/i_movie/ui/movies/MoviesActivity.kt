@@ -87,13 +87,13 @@ class MoviesActivity : AppCompatActivity(), MoviesView {
         return current
     }
 
-    fun showLoading() {
+    private fun showLoading() {
         moviesList.visibility = View.GONE
         placeholderMessage.visibility = View.GONE
         progressBar.visibility = View.VISIBLE
     }
 
-    fun showError(errorMessage: String) {
+    private fun showError(errorMessage: String) {
         moviesList.visibility = View.GONE
         placeholderMessage.visibility = View.VISIBLE
         progressBar.visibility = View.GONE
@@ -101,15 +101,7 @@ class MoviesActivity : AppCompatActivity(), MoviesView {
         placeholderMessage.text = errorMessage
     }
 
-//    fun showEmpty(emptyMessage: String) {
-//        moviesList.visibility = View.GONE
-//        placeholderMessage.visibility = View.VISIBLE
-//        progressBar.visibility = View.GONE
-//
-//        placeholderMessage.text = emptyMessage
-//    }
-
-    fun showContent(movies: List<Movie>) {
+    private fun showContent(movies: List<Movie>) {
         moviesList.visibility = View.VISIBLE
         placeholderMessage.visibility = View.GONE
         progressBar.visibility = View.GONE
@@ -120,10 +112,11 @@ class MoviesActivity : AppCompatActivity(), MoviesView {
     }
 
     override fun render(state: MoviesState) {
-        when {
-            state.isLoading -> showLoading()
-            state.errorMessage != null -> showError(state.errorMessage)
-            else -> showContent(state.movies)
+        when (state) {
+            is MoviesState.Loading -> showLoading()
+            is MoviesState.Error -> showError(state.errorMessage)
+            is MoviesState.Empty -> showError(state.emptyMessage)
+            is MoviesState.Content -> showContent(state.movies)
         }
     }
 
