@@ -19,6 +19,7 @@
             android:name=".ui.poster.PosterActivity"
             android:exported="false" />
         <activity
+            android:screenOrientation="portrait"
             android:name=".ui.movies.MoviesActivity"
             android:exported="true">
             <intent-filter>

@@ -35,7 +35,8 @@
             android:exported="false" />
         <activity
             android:name="com.hellcorp.i_movie.ui.movies.MoviesActivity"
-            android:exported="true" >
+            android:exported="true"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

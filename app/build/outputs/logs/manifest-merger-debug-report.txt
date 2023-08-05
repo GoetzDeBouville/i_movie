@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:2:1-32:12
-INJECTED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:2:1-32:12
-INJECTED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:2:1-32:12
-INJECTED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:2:1-32:12
+ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:2:1-33:12
 MERGED from [androidx.compose.ui:ui-geometry:1.4.3] /home/tslrdtv/.gradle/caches/transforms-3/a18dd6f76a2e5cb2d379c48e406b12c6/transformed/ui-geometry-1.4.3/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.compose.ui:ui-util:1.4.3] /home/tslrdtv/.gradle/caches/transforms-3/bce7c97a5901b36c59b2a516cd8db3ba/transformed/ui-util-1.4.3/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.compose.ui:ui-unit:1.4.3] /home/tslrdtv/.gradle/caches/transforms-3/5ec4991faaee731c075aee008ac7c1dc/transformed/ui-unit-1.4.3/AndroidManifest.xml:17:1-22:12
@@ -52,22 +52,22 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] /home/tslrdtv/.gradle/cac
 MERGED from [androidx.documentfile:documentfile:1.0.0] /home/tslrdtv/.gradle/caches/transforms-3/ee08863ea05522c8763dfeb6dc2bd7e9/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/tslrdtv/.gradle/caches/transforms-3/47b92974fbb9d4534cc9ab21cca58ccd/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /home/tslrdtv/.gradle/caches/transforms-3/2a076e316ad8d8479a54cfdbb91b5211/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
-INJECTED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:2:1-32:12
-INJECTED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:2:1-32:12
-INJECTED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:2:1-33:12
 	package
 		INJECTED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml
-		ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:2:1-32:12
+		ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:2:1-33:12
 		INJECTED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml
-		ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:2:1-32:12
+		ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:2:1-33:12
 		INJECTED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml
-		ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:2:1-32:12
+		ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:2:1-33:12
 		INJECTED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:2:11-69
@@ -80,7 +80,7 @@ ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.
 	android:name
 		ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:6:22-64
 application
-ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:8:5-30:19
+ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:8:5-31:19
 MERGED from [com.google.android.material:material:1.5.0] /home/tslrdtv/.gradle/caches/transforms-3/2afa74e2037f5fc71533b0b3fd2cbaf8/transformed/material-1.5.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.5.0] /home/tslrdtv/.gradle/caches/transforms-3/2afa74e2037f5fc71533b0b3fd2cbaf8/transformed/material-1.5.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/tslrdtv/.gradle/caches/transforms-3/2bf66b5585f22be702ef50040dc837cb/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
@@ -126,21 +126,23 @@ ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.
 	android:name
 		ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:19:13-53
 activity#com.hellcorp.i_movie.ui.movies.MoviesActivity
-ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:21:9-29:20
+ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:21:9-30:20
+	android:screenOrientation
+		ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:22:13-49
 	android:exported
-		ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:23:13-36
+		ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:24:13-36
 	android:name
-		ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:22:13-53
+		ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:23:13-53
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:24:13-28:29
+ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:25:13-29:29
 action#android.intent.action.MAIN
-ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:25:17-69
+ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:26:17-69
 	android:name
-		ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:25:25-66
+		ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:26:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:27:17-77
+ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:28:17-77
 	android:name
-		ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:27:27-74
+		ADDED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml:28:27-74
 uses-sdk
 INJECTED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/tslrdtv/Documents/Android/i_movie/app/src/main/AndroidManifest.xml
