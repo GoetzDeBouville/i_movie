@@ -8,7 +8,6 @@ import com.hellcorp.i_movie.domain.impl.MoviesInteractorImpl
 import com.hellcorp.i_movie.data.MoviesRepositoryImpl
 import com.hellcorp.i_movie.presentation.movies.MoviesSearchPresenter
 import com.hellcorp.i_movie.presentation.poster.PosterPresenter
-import com.hellcorp.i_movie.presentation.movies.MoviesView
 import com.hellcorp.i_movie.presentation.poster.PosterView
 
 object Creator {
@@ -21,10 +20,9 @@ object Creator {
     }
 
     fun provideMoviesSearchPresenter(
-        moviesView: MoviesView,
         context: Context
     ): MoviesSearchPresenter {
-        return MoviesSearchPresenter(view = moviesView, context = context)
+        return MoviesSearchPresenter(context = context)
     }
 
     fun providePosterPresenter(posterView: PosterView, imageUrl: String): PosterPresenter {

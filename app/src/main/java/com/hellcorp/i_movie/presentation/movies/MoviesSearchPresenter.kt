@@ -8,11 +8,13 @@ import com.hellcorp.i_movie.R
 import com.hellcorp.i_movie.domain.api.MoviesInteractor
 import com.hellcorp.i_movie.domain.models.Movie
 import com.hellcorp.i_movie.ui.movies.models.MoviesState
+import moxy.MvpPresenter
 
 class MoviesSearchPresenter(
-    private val view: MoviesView,
     private val context: Context
-) {
+) : MvpPresenter<MoviesView>() {
+    private var latestSearchText: String? = null
+
     private val moviesInteractor = Creator.provideMoviesInteractor(context)
     private val movies = ArrayList<Movie>()
     private val handler = Handler(Looper.getMainLooper())
@@ -24,11 +26,16 @@ class MoviesSearchPresenter(
         searchRequest(newSearchText)
     }
 
-    fun onDestroy() {
-        handler.removeCallbacks(searchRunnable)
+    override fun onDestroy() {
+        handler.removeCallbacksAndMessages(DEBOUNCE_DELAY)
     }
 
     fun searchDebounce(changedText: String) {
+        if (latestSearchText == changedText) {
+            return
+        }
+        this.latestSearchText = changedText
+
         lastSearchText = changedText
         handler.removeCallbacks(searchRunnable)
         handler.postDelayed(searchRunnable, DEBOUNCE_DELAY)
@@ -36,9 +43,7 @@ class MoviesSearchPresenter(
 
     private fun searchRequest(newSearchText: String) {
         if (newSearchText.isNotEmpty()) {
-            view.render(
-                MoviesState.Loading
-            )
+            renderState(MoviesState.Loading)
 
             moviesInteractor.searchMovies(newSearchText, object : MoviesInteractor.MoviesConsumer {
                 override fun consume(foundMovies: List<Movie>?, errorMessage: String?) {
@@ -49,33 +54,34 @@ class MoviesSearchPresenter(
                         }
                         when {
                             errorMessage != null -> {
-                                view.render(
+                                renderState(
                                     MoviesState.Error(
                                         errorMessage = context.getString(R.string.something_went_wrong)
                                     )
                                 )
-                                view.showToast(errorMessage)
+                                viewState.showToast(errorMessage)
                             }
 
                             movies.isEmpty() -> {
-                                view.render(
+                                renderState(
                                     MoviesState.Empty(
                                         emptyMessage = context.getString(R.string.nothing_found)
                                     )
-
                                 )
                             }
 
                             else -> {
-                                view.render(
-                                    MoviesState.Content(movies = movies)
-                                )
+                                renderState(MoviesState.Content(movies = movies))
                             }
                         }
                     }
                 }
             })
         }
+    }
+
+    private fun renderState(state: MoviesState) {
+        viewState.render(state)
     }
 
     companion object {

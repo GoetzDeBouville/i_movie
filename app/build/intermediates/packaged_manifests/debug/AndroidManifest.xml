@@ -18,6 +18,7 @@
     <uses-permission android:name="com.hellcorp.i_movie.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
     <application
+        android:name="com.hellcorp.i_movie.MoviesApplication"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -35,8 +36,7 @@
             android:exported="false" />
         <activity
             android:name="com.hellcorp.i_movie.ui.movies.MoviesActivity"
-            android:exported="true"
-            android:screenOrientation="portrait" >
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
