@@ -18,6 +18,7 @@ import com.hellcorp.i_movie.utility.Creator
 import com.hellcorp.i_movie.R
 import com.hellcorp.i_movie.domain.models.Movie
 import com.hellcorp.i_movie.presentation.movies.MoviesView
+import com.hellcorp.i_movie.ui.movies.models.MoviesState
 import com.hellcorp.i_movie.ui.poster.PosterActivity
 
 class MoviesActivity : AppCompatActivity(), MoviesView {
@@ -86,13 +87,13 @@ class MoviesActivity : AppCompatActivity(), MoviesView {
         return current
     }
 
-    override fun showLoading() {
+    fun showLoading() {
         moviesList.visibility = View.GONE
         placeholderMessage.visibility = View.GONE
         progressBar.visibility = View.VISIBLE
     }
 
-    override fun showError(errorMessage: String) {
+    fun showError(errorMessage: String) {
         moviesList.visibility = View.GONE
         placeholderMessage.visibility = View.VISIBLE
         progressBar.visibility = View.GONE
@@ -100,15 +101,15 @@ class MoviesActivity : AppCompatActivity(), MoviesView {
         placeholderMessage.text = errorMessage
     }
 
-    override fun showEmpty(emptyMessage: String) {
-        moviesList.visibility = View.GONE
-        placeholderMessage.visibility = View.VISIBLE
-        progressBar.visibility = View.GONE
+//    fun showEmpty(emptyMessage: String) {
+//        moviesList.visibility = View.GONE
+//        placeholderMessage.visibility = View.VISIBLE
+//        progressBar.visibility = View.GONE
+//
+//        placeholderMessage.text = emptyMessage
+//    }
 
-        placeholderMessage.text = emptyMessage
-    }
-
-    override fun showContent(movies: List<Movie>) {
+    fun showContent(movies: List<Movie>) {
         moviesList.visibility = View.VISIBLE
         placeholderMessage.visibility = View.GONE
         progressBar.visibility = View.GONE
@@ -116,6 +117,14 @@ class MoviesActivity : AppCompatActivity(), MoviesView {
         adapter.movies.clear()
         adapter.movies.addAll(movies)
         adapter.notifyDataSetChanged()
+    }
+
+    override fun render(state: MoviesState) {
+        when {
+            state.isLoading -> showLoading()
+            state.errorMessage != null -> showError(state.errorMessage)
+            else -> showContent(state.movies)
+        }
     }
 
     override fun showToast(message: String) {

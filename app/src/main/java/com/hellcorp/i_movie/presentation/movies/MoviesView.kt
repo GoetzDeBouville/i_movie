@@ -1,16 +1,9 @@
 package com.hellcorp.i_movie.presentation.movies
 
-import com.hellcorp.i_movie.domain.models.Movie
+import com.hellcorp.i_movie.ui.movies.models.MoviesState
 
 interface MoviesView {
-
-    fun showLoading()
-
-    fun showError(errorMessage: String)
-
-    fun showEmpty(emptyMessage: String)
-
-    fun showContent(movies: List<Movie>)
+    fun render(state : MoviesState)
 
     fun showToast(message: String)
 }
